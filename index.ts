@@ -3,8 +3,9 @@ import path from 'path';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import knex, { Knex } from 'knex';
-import { CardData, BlackCardData, DeckData, Card } from './interfaces.js';
+import { CardData, BlackCardData, DeckData } from './interfaces.js';
 import { v5 as uuidv5 } from 'uuid';
+import { Card } from '@canarado-dev/cah-types';
 
 const CARD_ID_NAMESPACE = '8a903250-8b77-43b2-802d-6f1e261704fd';
 

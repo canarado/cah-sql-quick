@@ -1,28 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es2022",
+    "target": "es2020",
     "module": "NodeNext",
-    "moduleResolution": "nodeNext",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
+    "moduleResolution": "NodeNext",
+    "declaration": true,
     "outDir": "./dist",
-    "rootDir": "./"
-  },
-  "ts-node": {
-    "esm": true,
-    "experimentalSpecifierResolution": "node",
-    "compilerOptions": {
-      "module": "NodeNext"
-    }
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "**/*.ts"
+    "index.ts",
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "test"
   ]
 }

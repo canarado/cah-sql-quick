@@ -32,9 +32,11 @@ The script accepts the following command-line arguments:
 - `--help` (alias: `-h`)
   - **Description**: Show help screen.
 
-## NPM Types Package **_not actually implemented just yet_**
+## NPM Types Package
 
-This will enable developers to install a small types package that contains interfaces for representing the data created from this utility.
+You can install the types package with `npm i --save-dev @canarado-dev/cah-types`.
+
+View the documentation [here](https://github.com/canarado/cah-types).
 
 ## Database Schema
 
@@ -64,5 +66,5 @@ At the moment, you can only modify the schema, but we will implement the ability
 - [ ] Update type of Id's to be true `uuid`s type instead of `string` if applicable
 - [ ] Setup more database connectors
   - [ ] Abstract the database connectors
-- [ ] Setup the types library to re-export the common schema representations of the db data
+- [x] Setup the types library to re-export the common schema representations of the db data
 - [ ] npx?

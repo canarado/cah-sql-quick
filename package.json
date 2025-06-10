@@ -1,17 +1,29 @@
 {
-  "name": "cah-sql-quick",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@canarado-dev/cah-sql-quick",
+  "version": "1.0.1",
+  "main": "dist/index.js",
+  "types": "dist/types.d.ts",
   "type": "module",
+  "bin": {
+    "cah-sql-quick": "dist/index.js"
+  },
   "scripts": {
     "start": "node --loader ts-node/esm ./index.ts",
     "build": "tsc",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "cah",
+    "sql",
+    "cli",
+    "database",
+    "interfaces",
+    "types"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "A CLI tool to import Cards Against Humanity data into SQL databases and export related types.",
   "devDependencies": {
     "@types/node": "^22.15.30",
     "@types/uuid": "^10.0.0",
@@ -20,11 +32,15 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@canarado-dev/cah-types": "^1.0.0",
     "knex": "^3.1.0",
     "mssql": "^11.0.1",
     "pg": "^8.16.0",
     "sqlite3": "^5.1.7",
     "uuid": "^11.1.0",
     "yargs": "^18.0.0"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
