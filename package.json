@@ -1,0 +1,30 @@
+{
+  "name": "cah-sql-quick",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --loader ts-node/esm ./index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@types/uuid": "^10.0.0",
+    "@types/yargs": "^17.0.33",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "knex": "^3.1.0",
+    "mssql": "^11.0.1",
+    "pg": "^8.16.0",
+    "sqlite3": "^5.1.7",
+    "uuid": "^11.1.0",
+    "yargs": "^18.0.0"
+  }
+}
