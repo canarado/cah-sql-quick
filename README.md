@@ -26,7 +26,7 @@ The script accepts the following command-line arguments:
   - **Description**: Path to the SQLite database file (e.g., `./cah.sqlite`). Required for SQLite if `connectionString` is not provided.
   - **Type**: `string`
 - `--dbSchema`
-  - **Description**: Database schema to use (e.g., `dbo` for SQL Server, `public` for PostgreSQL).
+  - **Description**: Database schema to use (e.g., `dbo` for SQL Server, `public` for PostgreSQL). This is unused if `dbType` is `sqlite` due to sqlite not supporting schemas.
   - **Type**: `string`
   - **Default**: `dbo`
 - `--help` (alias: `-h`)
