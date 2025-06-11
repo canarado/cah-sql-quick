@@ -10,27 +10,31 @@ We do not attempt to overwrite tables, running this against DBs with a matching 
 
 The script accepts the following command-line arguments:
 
-- `--inputFile` (alias: `-i`)
-  - **Description**: Path to the input JSON file.
-  - **Type**: `string`
-  - **Default**: `./cah-cards-compact.json` in the current directory.
-- `--dbType` (alias: `-d`)
-  - **Description**: Type of the target database.
-  - **Type**: `string`
-  - **Choices**: `sqlite`, `sqlserver`, `postgresql`
-  - **Required**: Yes
-- `--connectionString` (alias: `-c`)
-  - **Description**: Database connection string. Required for SQL Server and PostgreSQL. Optional for SQLite (if `sqliteFile` is provided).
-  - **Type**: `string`
-- `--sqliteFile` (alias: `-s`)
-  - **Description**: Path to the SQLite database file (e.g., `./cah.sqlite`). Required for SQLite if `connectionString` is not provided.
-  - **Type**: `string`
-- `--dbSchema`
-  - **Description**: Database schema to use (e.g., `dbo` for SQL Server, `public` for PostgreSQL). This is unused if `dbType` is `sqlite` due to sqlite not supporting schemas.
-  - **Type**: `string`
-  - **Default**: `dbo`
-- `--help` (alias: `-h`)
-  - **Description**: Show help screen.
+-   `--inputFile` (alias: `-i`)
+    -   **Description**: Path to the input JSON file.
+    -   **Type**: `string`
+    -   **Default**: `./cah-cards-compact.json` in the current directory.
+-   `--dbType` (alias: `-d`)
+    -   **Description**: Type of the target database.
+    -   **Type**: `string`
+    -   **Choices**: `sqlite`, `sqlserver`, `postgresql`
+    -   **Required**: Yes
+-   `--connectionString` (alias: `-c`)
+    -   **Description**: Database connection string. Required for SQL Server and PostgreSQL. Optional for SQLite (if `sqliteFile` is provided).
+    -   **Type**: `string`
+-   `--sqliteFile` (alias: `-s`)
+    -   **Description**: Path to the SQLite database file (e.g., `./cah.sqlite`). Required for SQLite if `connectionString` is not provided.
+    -   **Type**: `string`
+-   `--dbSchema`
+    -   **Description**: Database schema to use (e.g., `dbo` for SQL Server, `public` for PostgreSQL). This is unused if `dbType` is `sqlite` due to sqlite not supporting schemas.
+    -   **Type**: `string`
+    -   **Default**: `dbo`
+-   `--noSchema`
+    -   **Description**: Create tables without a schema prefix, regardless of `dbType`. If true, the `--dbSchema` argument is ignored.
+    -   **Type**: `boolean`
+    -   **Default**: `false`
+-   `--help` (alias: `-h`)
+    -   **Description**: Show help screen.
 
 ## NPM Types Package
 
@@ -63,8 +67,8 @@ At the moment, you can only modify the schema, but we will implement the ability
 
 ## To-Do
 
-- [ ] Update type of Id's to be true `uuid`s type instead of `string` if applicable
-- [ ] Setup more database connectors
-  - [ ] Abstract the database connectors
-- [x] Setup the types library to re-export the common schema representations of the db data
-- [ ] npx?
+-   [ ] Update type of Id's to be true `uuid`s type instead of `string` if applicable
+-   [ ] Setup more database connectors
+    -   [ ] Abstract the database connectors
+-   [x] Setup the types library to re-export the common schema representations of the db data
+-   [ ] npx?
